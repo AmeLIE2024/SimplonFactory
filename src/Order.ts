@@ -1,7 +1,7 @@
 import {Customer} from "./Customer";
 import {Product} from "./Product";
 
-class Order {
+export class Order {
 
     orderId: number;
     customer: Customer;
@@ -16,26 +16,32 @@ class Order {
 
     }
 
-    addProduct(product: Product) {
-        //todo : ajoute un produit à la commande
+
+
+    //entrée liste et nouveau produit
+    addProduct(product: Product)  {
+        this.productList.push(product);
     }
 
     removeProduct(productId: number) {
-        //todo : retire un produit de la commande
+        const index = this.productList.findIndex(product => product.productId === productId);
+        this.productList.splice(index,1)
     }
 
     calculateWeight(){
-        //todo : calcule le poids total de la commande
+        return this.productList.reduce((total, product)=> total + product.weight,0)
     }
 
-    calculateTotal(){
-        //todo : calcule le prix total de la commande
+     calculateTotal(){
+       return this.productList.reduce((total, product) => total + product.price,0)
     }
 
     displayOrder(){
-        //todo: Affiche les détails de la commande:
-        // les informations du client
-        // les informations de chaque produit
-        // le total de la commande
+
+       const infos =  this.customer.displayInfo();
+       const detailProduct = this.productList.map(product => product.displayDetails()).join("\n")
+       const totalPrice = this.calculateTotal()
+       return ("\n Client: " +infos + "\n Détail de la commande: "+ detailProduct + "\n Prix total: " + totalPrice) // les informations du client = displayInfo
+
     }
 }

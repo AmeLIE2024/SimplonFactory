@@ -11,7 +11,7 @@
         this.price = price;
     }
     displayDetails(): string{
-        return `Product ID: ${this.productId}, Name: ${this.name}, Weight: ${this.weight}, Price: ${this.price} €`;
+        return `\n Product ID: ${this.productId},\n Name: ${this.name},\n Weight: ${this.weight},\n Price: ${this.price} €`;
     }
 
 }

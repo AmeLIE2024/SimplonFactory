@@ -12,11 +12,6 @@ export class Shoes extends Product {
     }
 
     displayDetails(size?: ShoeSize): string {
-        if(size === undefined || size == null){
-            return super.displayDetails();
-        }else {
-            return super.displayDetails() + "Size: " + size;
-        }
-
+            return super.displayDetails() + "\n Size: " + this.size;
     }
 }

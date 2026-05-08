@@ -11,7 +11,7 @@ export class Customer {
     }
 
     displayInfo(): string {
-        return `Identifiant : ${this.customerId} ;  Nom: ${this.name} ; Email: ${this.email} .`;
+        return `\n Identifiant : ${this.customerId} ; \n Nom: ${this.name} ; \n Email: ${this.email} .`;
     }
 }
 
