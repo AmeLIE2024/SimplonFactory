@@ -25,7 +25,7 @@ export class Order {
 
     removeProduct(productId: number) {
         const index = this.productList.findIndex(product => product.productId === productId);
-        this.productList.splice(index,1)
+        this.productList.splice(index,0)
     }
 
     calculateWeight(){

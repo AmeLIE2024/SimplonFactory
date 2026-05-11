@@ -1,5 +1,4 @@
 import {Customer} from './src/Customer'
-import {ProductDerived} from './src/ProductDerived'
 import {ClothingSize} from "./src/ClothingSize";
 import {Order} from "./src/Order";
 import {Shoes} from "./src/Shoes";

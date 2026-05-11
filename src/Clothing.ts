@@ -1,6 +1,6 @@
 import {Product} from "./Product";
 import {ClothingSize} from "./ClothingSize";
-import {ShoeSize} from "./ShoeSize";
+
 
 export  class Clothing extends Product {
 
@@ -11,7 +11,7 @@ export  class Clothing extends Product {
         this.size = size
     }
 
-    displayDetails(size?: ClothingSize): string {
+    displayDetails(): string {
                  return super.displayDetails() + "\n Size:" + this.size;
     }
 }
